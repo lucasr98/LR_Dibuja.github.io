@@ -204,22 +204,20 @@ main{
 
 .ful_img{
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	background-color: rgba(0, 0, 0, .80);
 	position: fixed;
 	top: 0;
-	left: 0;
 	display: none;
 	align-items: center;
 	justify-content: center;
 	backdrop-filter: blur(10px);
 	z-index: 300;
-	padding: 36px 0px;
 }
 
 .ful_img_ampliado{
 	min-width: 100%;
-	height: 100vh;
+	height: 100%;
 	background-color: rgba(0, 0, 0, .80);
 	position: fixed;
 	display: flex;
@@ -227,11 +225,36 @@ main{
 	justify-content: center;
 	backdrop-filter: blur(10px);
 	z-index: 300;
-	overflow: scroll;
+	overflow: auto;
 	top: 0;
 }
 
+.img_container{
+	min-width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 36px 0px;
+}
+
+.img_container_ampliado{
+	min-width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	overflow: auto;
+	top: 0;
+	left: 0;
+}
+
 .img_original{
+	margin: auto;
 	max-width: 100%;
 	max-height: 100%;
 	cursor: zoom-in;
@@ -239,9 +262,6 @@ main{
 }
 
 .img_ampliada{
-	top: 0;
-	position: absolute;
-	overflow: scroll;
 	margin: auto;
 	cursor: zoom-out;
 	user-select: none;
@@ -253,7 +273,7 @@ main{
 	text-align: center;
 	position: fixed;
 	top: 18px;
-	right: 18px;
+	left: 18px;
 	font-size: 30px;
 	color: var(--color__claro__blanco);
 	cursor: pointer;
@@ -449,13 +469,6 @@ footer{
 }
 
 
-
-
-@media only screen and (max-width: 1113px){
-	.img_ampliada{
-	left: 0;
-}
-}
 
 @media only screen and (max-width: 916px){
 

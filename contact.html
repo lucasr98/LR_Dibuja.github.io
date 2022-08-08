@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			LR Dibuja | Contact | Lucas Retamozo
+		</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="normalize.css">
+		<link rel="icon" href="imagenes\recursos\lr_dibuja_logo_rojo.svg">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Text&display=swap" rel="stylesheet">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+		
+		<meta charset="utf-8">
+		<meta name="keywords" content="dibujo,arte,lr dibuja,ilustración">
+		<meta name="description" content="Hola, mi nombre es Lucas Retamozo y soy un artista digital. Ésta es mi página principal, en ella subo todos los dibujos digitales que hago. Te dejo mis redes sociales por si querés seguirme, desde ya muchas gracias!">
+		<meta name="author" content="Lucas Retamozo">
+		<meta name="robots" content="index">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<script src="https://kit.fontawesome.com/bd16a1d5bb.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<header>
+			<div class="home">	
+				<a class="home__logo" href="index.html">
+					<div class="home__vector">
+						<img src="imagenes\recursos\LR 2021.svg">
+					</div>
+					<h1 class="home__text">
+						LUCAS RETAMOZO
+					</h1>
+				</a>
+			</div>
+			<nav class="sub-header--pc">
+				<a class="sub-header--pc__button" href="contact.html">
+					<div class="sub-header--pc__button__link">Contact</div>
+				</a>
+				<a class="sub-header--pc__button" href="about.html">
+					<div class="sub-header--pc__button__link">About</div>
+				</a>
+			</nav>
+			<nav class="sub-header--sm">
+				<a href="contact.html" title="Contactarme">
+					<i class="fa-solid fa-comment" href="contact.html" title="Contact"></i>
+				</a>
+				<a href="about.html" title="Acerca de mí">
+					<i class="fa-solid fa-user" href="about.html" title="About Me"></i>
+				</a>
+			</nav>
+		</header>
+		<nav class="socials">
+			<div class="socials__text">
+				Follow me:
+			</div>
+			<div class="socials__box">
+				<a class="socials__box__button" href="https://www.instagram.com/lr.dibuja/?hl=es-la" target="_blank">
+					<img src="imagenes\recursos\Instagram_circulo_negro.svg" title="Instagram">
+				</a>
+				<a class="socials__box__button" href="https://www.deviantart.com/rukazu98/gallery/all" target="_blank">
+					<img src="imagenes\recursos\Deviantart_circular_negro1.svg" title="Deviantart">
+				</a>
+				<a class="socials__box__button" href="https://www.behance.net/lucasretamozo" target="_blank">
+					<img src="imagenes\recursos\Behance.svg" title="Behance">
+				</a>
+				<a class="socials__box__button" href="https://ar.pinterest.com/LRdibuja/lr-dibuja/" target="_blank">
+					<img src="imagenes\recursos\Pinterest_circular_negro1.svg" title="Pinterest">
+				</a>
+			</div>
+		</nav>
+		<main class="main">
+			<div class="ful__warn" id="fulWarnBox">
+				<div class="contact__warning-background">
+					<p class="contact__warning" id="contactWarning"></p>
+					<span class="aceptar" onclick="closeWarn()">ok</span>
+				</div>
+			</div>
+			<div class="contact">
+				<div class="contact__text-container">
+					<div class="paragraph-text">
+						<h2>
+						Contact me
+						</h2>
+						<p>
+							You can contact me by completing the following form. Or you can write to me at the email below.
+						</p>
+					</div>
+					<div class="paragraph-text">
+						<h2>
+						Contactame
+						</h2>
+						<p>
+							Podés contactarte conmigo completando el siguiente formulario. O podés escribirme al correo que está debajo.
+						</p>
+					</div>
+					<p>E-mail / Correo electrónico: 
+						<a href="mailto:lucas.rtmz98@gmail.com" class="link">lucas.rtmz98@gmail.com</a>
+					</p>
+				</div>
+				<form class="contact__input" id="contactInput" action="contact.php" method="post">
+					<div class="contact__input__item">
+						<input type="text" name="Name / Nombre" class="contact__input__item__button" id="contactName" placeholder="Name / Nombre" maxlength="50">
+					</div>
+					<div class="contact__input__item">
+						<input type="email" name="E-mail / Correo electrónico" class="contact__input__item__button" id="contactEmail" placeholder="E-mail / Correo electrónico" maxlength="50">
+					</div>
+					<div class="contact__input__item">
+						<textarea name="Text area / Área de texto" class="contact__input__item__button" id="contactTextArea" placeholder="Message (50 - 1000 characters) / Mensaje (50 - 1000 caracteres)" maxlength="1000"></textarea>
+					</div>
+					<button class="contact__input__item-submit">
+						<input type="submit" value="Send / Enviar" class="contact__input__item__button-submit">
+					</button>
+				</form>
+			</div>
+		</main>
+		<footer>
+			<div class="copyright">
+				© 2022 - LR Dibuja
+			</div>
+		</footer>
+		<script src="contact.js"></script>
+	</body>
+</html>

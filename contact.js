@@ -8,6 +8,8 @@ const warn = document.getElementById("contactWarning");
 
 let contador = 0;
 
+var lastScrollTop = 0;
+
 form.addEventListener("submit", e=>{
 	e.preventDefault()
 	let warning = ""
@@ -68,5 +70,17 @@ function disableScroll(){
 function enableScroll(){  
     window.onscroll = null;
 }
+
+// SCROLL BENCABEZADO
+
+window.addEventListener("scroll", function(){
+   var st = window.pageYOffset || document.documentElement.scrollTop; 
+   if (st > lastScrollTop){
+     header.classList.add("header");
+   } else {
+     header.classList.remove("header");
+   }
+   lastScrollTop = st;
+}, false);
 
 fulWarnBox.addEventListener("click",fulWarnClose);

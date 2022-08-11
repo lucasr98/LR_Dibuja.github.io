@@ -75,6 +75,21 @@ header{
 	align-items: center;
 	padding: 20px 36px;
 	z-index: 200;
+	transition: margin-top, .3s ease-in-out;
+}
+
+.header{
+	margin-top: -236px;
+	position: fixed;
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--color__oscuro__negro);
+	align-items: center;
+	padding: 20px 36px;
+	z-index: 200;
+	transition: margin-top, .3s ease-in-out;
 }
 
 .home__vector{
@@ -267,28 +282,24 @@ main{
 	user-select: none;
 }
 
-.x{
-	background-color: var(--color__oscuro__negro);
-	border-radius: 100%;	
-	text-align: center;
-	position: fixed;
-	top: 18px;
-	left: 18px;
-	font-size: 30px;
-	color: var(--color__claro__blanco);
-	cursor: pointer;
-	transition: transform, color, .3s ease-in-out;
-	display: grid;
-	place-items: center;
-	width: 50px;
-	height: 50px;
+#x{
+	top: 36px;
+	right: 36px;
+	font-size: 54px;
+	z-index: 1000;
 	user-select: none;
+	display: none;
+	transition: background-color, transform, opacity, .3s ease-in-out;
+	position: fixed;
+	cursor: pointer;
+	color: var(--color__oscuro__negro);
+	opacity: .25;
 }
 
-.x:hover{
+#x:hover{
 	transform: scale(1.2);
 	color: var(--color__claro__rojo);
-	background-color: var(--color__claro__negro);
+	opacity: 1;
 }
 
 .gallery{
@@ -506,12 +517,12 @@ footer{
 		grid-column-gap: 18px;
 	}
 	
-	i {
+	.sub-header--sm i {
 		font-size: 18px;
 		color: var(--color__claro__blanco);
 	}
 	
-	i:hover {
+	.sub-header--sm i:hover {
 		color: var(--color__claro__rojo);
 	}
 }

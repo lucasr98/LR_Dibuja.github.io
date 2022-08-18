@@ -67,14 +67,12 @@ function closeImg(){
 
 // DESACTIVAR EL SCROLL DURANTE IMAGEN MODAL
 
-function disableScroll(){  
-    var x = window.scrollX;
-    var y = window.scrollY;
-    window.onscroll = function(){ window.scrollTo(x, y) };
+function disableScroll(){
+	document.getElementById("body").style.overflow = "hidden";
 }
 
-function enableScroll(){  
-    window.onscroll = null;
+function enableScroll(){
+    document.getElementById("body").style.removeProperty("overflow");
 }
 
 
@@ -100,3 +98,5 @@ window.addEventListener("scroll", function(){
 fulImg.addEventListener("click",fulImgZoom,true);
 
 imgContainer.addEventListener("click",fulImgClose);
+
+x.addEventListener("click",closeImg)

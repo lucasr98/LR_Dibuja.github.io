@@ -1,7 +1,7 @@
 <?php
-$name = $_POST['Name / Nombre'];
-$mail = $_POST['E-mail / Correo electrónico'];
-$message = $_POST['Text area / Área de texto'];
+$name = $_POST['name'];
+$mail = $_POST['email'];
+$message = $_POST['message'];
 
 $header = 'From: ' . $mail . " \r\n";
 $header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
@@ -17,6 +17,8 @@ $para = 'lucas.rtmz98@gmail.com';
 
 mail($para, utf8_decode($message), $header);
 
-header("Location:index.html");
+include "index.html";
+
+header("Location:contact.html");
 ?>
 -->

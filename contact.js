@@ -11,6 +11,7 @@ let contador = 0;
 var lastScrollTop = 0;
 
 form.addEventListener("submit", e=>{
+	e.preventDefault()
 	let warning = ""
 	let entrar = false
 	let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/

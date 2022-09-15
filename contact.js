@@ -38,7 +38,6 @@ form.addEventListener("submit", e=>{
 	else {
 		openFulWarn()
 		warn.innerHTML = "¡Mensaje enviado!";
-		return sendMail();
 	}
 })
 

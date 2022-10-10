@@ -3,14 +3,11 @@
 const fulImgBox = document.getElementById("fulImgBox"),
 fulImg = document.getElementById("fulImg"),
 imgContainer = document.getElementById("imgContainer");
-
 const header = document.getElementById("header");
-
 const x = document.getElementById("x");
+const imagenes = document.querySelectorAll(".gallery__image__item")
 
 let contador = 0;
-
-
 
 // IMAGEN MODAL
 
@@ -68,11 +65,13 @@ function closeImg(){
 // DESACTIVAR EL SCROLL DURANTE IMAGEN MODAL
 
 function disableScroll(){
-	document.getElementById("body").style.overflow = "hidden";
+	body.style.overflow = "hidden";
+	imgContainer.style.overflowY = "scroll";
 }
 
 function enableScroll(){
-    document.getElementById("body").style.removeProperty("overflow");
+    body.style.removeProperty("overflow");
+    imgContainer.style.removeProperty("overflow-y");
 }
 
 
@@ -100,3 +99,31 @@ fulImg.addEventListener("click",fulImgZoom,true);
 imgContainer.addEventListener("click",fulImgClose);
 
 x.addEventListener("click",closeImg)
+
+document.addEventListener("click", (e)=>{
+	const imagen = e.target;
+	if(imagen.className === "gallery__image__item"){
+		return openFulImg(imagen.src);
+	}
+})
+
+function intersection(entries, observer){
+	entries.forEach(entry =>{
+		if(entry.isIntersecting){
+			entry.target.src = entry.target.dataset.src;
+			observer.unobserve(entry.target);
+		}
+	})
+}
+
+const options = {
+	root: null,
+	rootMargin: `36px`,
+	threshold: 0
+}
+
+const observer = new IntersectionObserver(intersection, options);
+
+imagenes.forEach(i => {
+	observer.observe(i)
+})

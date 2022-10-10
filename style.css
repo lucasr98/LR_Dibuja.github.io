@@ -3,6 +3,7 @@
 	margin: 0;
 	font-family: var(--font__text__regular);
 	font-size: 15px;
+	user-select: none;
 }
 
 :root {
@@ -125,17 +126,6 @@ header{
 .home__logo:hover > .home__vector {
 	transform: rotate(360deg);
 }
-
-/*
-.home__logo:hover > img {
-	transform: rotate(360deg);
-}
-
-.home__logo img{
-	height: 50px;
-	transition: transform .3s ease-in-out;
-}
-*/
 
 h1{
 	font-family: 'Big Shoulders Text', cursive;

@@ -5,7 +5,7 @@ fulImg = document.getElementById("fulImg"),
 imgContainer = document.getElementById("imgContainer");
 const header = document.getElementById("header");
 const x = document.getElementById("x");
-const imagenes = document.querySelectorAll(".gallery__image__item")
+const imagenes = document.querySelectorAll(".grid-item__item")
 
 let contador = 0;
 
@@ -39,13 +39,13 @@ function fulImgZoom(){
 
 function fulImgClose(e){
 	if (e.target !== this){
-  		return;
-  	}
-  	else{
-  		fulImg.classList.replace("img_ampliada", "img_original");
-  		fulImgBox.classList.replace("ful_img_ampliado", "ful_img");
-  		imgContainer.classList.replace("img_container_ampliado", "img_container");
-  		contador = 0;
+		return;
+	}
+	else{
+		fulImg.classList.replace("img_ampliada", "img_original");
+		fulImgBox.classList.replace("ful_img_ampliado", "ful_img");
+		imgContainer.classList.replace("img_container_ampliado", "img_container");
+		contador = 0;
 		closeImg();
 	}
 }
@@ -102,28 +102,18 @@ x.addEventListener("click",closeImg)
 
 document.addEventListener("click", (e)=>{
 	const imagen = e.target;
-	if(imagen.className === "gallery__image__item"){
+	if(imagen.className === "grid-item__item"){
 		return openFulImg(imagen.src);
 	}
 })
 
-function intersection(entries, observer){
-	entries.forEach(entry =>{
-		if(entry.isIntersecting){
-			entry.target.src = entry.target.dataset.src;
-			observer.unobserve(entry.target);
-		}
-	})
-}
 
-const options = {
-	root: null,
-	rootMargin: `36px`,
-	threshold: 0
-}
 
-const observer = new IntersectionObserver(intersection, options);
-
-imagenes.forEach(i => {
-	observer.observe(i)
-})
+var elem = document.querySelector('.grid');
+var msnry = new Masonry( elem, {
+  // options
+  itemSelector: '.grid-item',
+	gutter: 18,
+	fitWidth: true,
+	horizontalOrder: true
+});

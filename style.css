@@ -282,7 +282,7 @@ main{
 .modal__buttons{
 	top: 50vh;
 	font-size: 54px;
-	z-index: 1000;
+	z-index: 10000;
 	user-select: none;
 	transition: background-color, transform, opacity, .3s ease-in-out;
 	position: fixed;
